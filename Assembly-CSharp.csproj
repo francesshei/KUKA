@@ -53,8 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraMovement.cs" />
      <Compile Include="Assets\Client.cs" />
-     <Compile Include="Assets\EndEffectorPosition.cs" />
      <Compile Include="Assets\Head.cs" />
      <Compile Include="Assets\Server.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">

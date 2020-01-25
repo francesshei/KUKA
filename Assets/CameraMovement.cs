@@ -16,9 +16,9 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         //Cartesian camera coordinates
-        cartesian_pos.x = 0;
+        cartesian_pos.x = 40;
         cartesian_pos.y = 40; 
-        cartesian_pos.z = 40; 
+        cartesian_pos.z = 0; 
         GameObject.FindGameObjectWithTag("MainCamera").transform.position = cartesian_pos;
         //r
         polar[0] = Mathf.Sqrt(cartesian_pos.x * cartesian_pos.x + cartesian_pos.y * cartesian_pos.y + cartesian_pos.z * cartesian_pos.z);
@@ -75,6 +75,28 @@ public class CameraMovement : MonoBehaviour
       cartesian_pos.y=polar[0]*Mathf.Cos(polar[1]);
       cartesian_pos.z=polar[0]*Mathf.Sin(polar[1])*Mathf.Sin(polar[2]);
       //Update the matrix
+      GameObject.FindGameObjectWithTag("MainCamera").transform.position = cartesian_pos;
+      GameObject.FindGameObjectWithTag("MainCamera").transform.LookAt(target);}
+      }
+      
+      if(Input.GetKey("z")){
+      if (polar[0] > 15.0){
+      polar[0] = polar[0] - 0.5F;
+      cartesian_pos.x=polar[0]*Mathf.Sin(polar[1])*Mathf.Cos(polar[2]);
+      cartesian_pos.y=polar[0]*Mathf.Cos(polar[1]);
+      cartesian_pos.z=polar[0]*Mathf.Sin(polar[1])*Mathf.Sin(polar[2]);
+      //Update the camera matrix
+      GameObject.FindGameObjectWithTag("MainCamera").transform.position = cartesian_pos;
+      GameObject.FindGameObjectWithTag("MainCamera").transform.LookAt(target);}
+      }
+      
+      if(Input.GetKey("x")){
+      if (polar[0] < 50.0){
+      polar[0] = polar[0] + 0.5F;
+      cartesian_pos.x=polar[0]*Mathf.Sin(polar[1])*Mathf.Cos(polar[2]);
+      cartesian_pos.y=polar[0]*Mathf.Cos(polar[1]);
+      cartesian_pos.z=polar[0]*Mathf.Sin(polar[1])*Mathf.Sin(polar[2]);
+      //Update the camera matrix
       GameObject.FindGameObjectWithTag("MainCamera").transform.position = cartesian_pos;
       GameObject.FindGameObjectWithTag("MainCamera").transform.LookAt(target);}
       }

@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\CameraMovement.cs" />
      <Compile Include="Assets\Client.cs" />
+     <Compile Include="Assets\EndEffectorMovement.cs" />
      <Compile Include="Assets\Head.cs" />
      <Compile Include="Assets\Server.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">

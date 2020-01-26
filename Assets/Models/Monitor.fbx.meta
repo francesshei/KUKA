@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 8659b1dddec05de4293107789a47aed9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ChamferCyl02
+    100002: Line01
+    100004: Line02
+    100006: Line03
+    100008: Line04
+    100010: Line09
+    100012: Line10
+    100014: Line11
+    100016: Line12
+    100018: Line13
+    100020: Line14
+    100022: Line15
+    100024: Line16
+    100026: Line17
+    100028: Line18
+    100030: Line19
+    100032: Line20
+    100034: Line21
+    100036: //RootNode
+    100038: Monitor
+    100040: obj_01
+    100042: obj_03
+    100044: Object01
+    100046: Object02
+    100048: Object03
+    100050: Particle View 01
+    100052: Particle View 01 1
+    100054: Particle View 01 2
+    100056: Particle View 01 3
+    100058: Plane01
+    100060: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430"
+    400000: ChamferCyl02
+    400002: Line01
+    400004: Line02
+    400006: Line03
+    400008: Line04
+    400010: Line09
+    400012: Line10
+    400014: Line11
+    400016: Line12
+    400018: Line13
+    400020: Line14
+    400022: Line15
+    400024: Line16
+    400026: Line17
+    400028: Line18
+    400030: Line19
+    400032: Line20
+    400034: Line21
+    400036: //RootNode
+    400038: Monitor
+    400040: obj_01
+    400042: obj_03
+    400044: Object01
+    400046: Object02
+    400048: Object03
+    400050: Particle View 01
+    400052: Particle View 01 1
+    400054: Particle View 01 2
+    400056: Particle View 01 3
+    400058: Plane01
+    400060: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430"
+    2100000: 'Monitor Slot #17'
+    2100002: 'Monitor Slot #11'
+    2100004: 'Monitor Slot #3'
+    2100006: 'Monitor Slot #5'
+    2100008: 'Monitor Slot #9'
+    2100010: 'Monitor Slot #13'
+    2100012: 'Monitor Slot #14'
+    2100014: 'Monitor Slot #15'
+    2100016: 'Monitor Slot #10'
+    2100018: 'Monitor Slot #12'
+    2100020: 'Monitor Slot #8'
+    2100022: 'Monitor Slot #16'
+    2100024: 'Monitor Slot #18'
+    2100026: 'Monitor Slot #19'
+    2100028: 'Monitor Slot #20'
+    2100030: 'Monitor Slot #4'
+    2100032: 'Monitor Slot #2'
+    2100034: No Name
+    2100036: 'Monitor Slot #1'
+    2100038: 'Monitor Slot #6'
+    2100040: 'Monitor Slot #7'
+    2100042: 'Material #173 Slot #6'
+    2100044: 'Material #173 Slot #50'
+    2100046: 'Material #173 Slot #4'
+    2300000: ChamferCyl02
+    2300002: obj_01
+    2300004: obj_03
+    2300006: Object01
+    2300008: Object02
+    2300010: Object03
+    2300012: Plane01
+    2300014: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430"
+    3300000: ChamferCyl02
+    3300002: obj_01
+    3300004: obj_03
+    3300006: Object01
+    3300008: Object02
+    3300010: Object03
+    3300012: Plane01
+    3300014: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430"
+    4300000: Plane01
+    4300002: Object03
+    4300004: Object01
+    4300006: Object02
+    4300008: ChamferCyl02
+    4300010: obj_03
+    4300012: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430"
+    4300014: obj_01
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

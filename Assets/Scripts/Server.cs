@@ -21,6 +21,9 @@ public class Server : MonoBehaviour
     private TcpListener server;
     private bool serverStarted; 
     
+    //Boolean to check if out of bounds
+    public bool navp = false; 
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -72,9 +75,15 @@ public class Server : MonoBehaviour
                     StreamReader reader = new StreamReader(s,true);
                     string data = reader.ReadLine();
                     //Debug.Log(data);
-                    joints = ReconstructJoints(data);
-                    Debug.Log(joints);
-                    StartCoroutine(MoveKuka(joints));
+                    if(data=="NAVP"){
+                        Debug.Log("Not a valid pose");
+                        navp = true; 
+                    }
+                    else {
+                        navp = false; 
+                        joints = ReconstructJoints(data);
+                        StartCoroutine(MoveKuka(joints));
+                    }
                     //MoveKuka(joints);
                     //if data not null add processing function here
                 }
@@ -127,8 +136,6 @@ public class Server : MonoBehaviour
     }
     
     IEnumerator MoveKuka(float[] joints) {
-        //TODO: dividere il valore dell'angolo di ogni joint in pezzi più piccoli 
-        //e mettere un contatore per incrementare gradualmente lo spostamento
         Debug.Log("Moving Kuka");
         for (int i=0; i < joints.Length; i++){
         delta_joints[i] = joints[i]/inv_speed;  

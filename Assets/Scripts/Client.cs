@@ -20,9 +20,12 @@ public class Client : MonoBehaviour
     public Vector3 old; 
     
     //Speed variables 
-    public float movementSpeed = 5f; 
-    public float maxIncrement = 0.5f;
-    private float currentIncrement; 
+    //public float movementSpeed = 5f;
+    //public float minIncrement = 0.01f; 
+    //public float maxIncrement = 0.5f;
+    //static float t = 0f;
+    
+    private float currentIncrement = 0.2f; 
     
     public float increment; 
     public int speed = 20;
@@ -119,51 +122,46 @@ public class Client : MonoBehaviour
         
         
         //Forward
-        if (Input.GetKey("w")){
-            currentIncrement = 0.2f;
+        if (Input.GetKeyDown("w")){
             //if(Input.GetKey("w")){
             //currentIncrement +=  Time.deltaTime * movementSpeed;
             //currentIncrement = Mathf.Clamp(currentIncrement, 0, maxIncrement);
             desired.z = desired.z + currentIncrement;
-            Debug.Log(desired.z);
+            
             //currentIncrement = 0f;
-            //Debug.Log(currentIncrement);
+            Debug.Log(currentIncrement);
         }
         //Backwward
         if (Input.GetKeyDown("s")){
-            currentIncrement = 0.2f;
             //if(Input.GetKey("s")){
             //increment += speed * Time.deltaTime;}
             desired.z = desired.z - currentIncrement;
         }
         //Left
         if (Input.GetKeyDown("a")){
-            currentIncrement = 0.2f;
             //if(Input.GetKey("a")){
             //increment += speed * Time.deltaTime;}
             desired.x = desired.x + currentIncrement;
         }
         //Right
         if (Input.GetKeyDown("d")){
-            currentIncrement = 0.2f;
             //if(Input.GetKey("d")){
             //increment += speed * Time.deltaTime;}
             desired.x = desired.x - currentIncrement;
         }
         //Up
         if (Input.GetKeyDown("r")){
-            currentIncrement = 10f;
             //if(Input.GetKey("r")){
             //increment += speed * Time.deltaTime;}
             desired.y = desired.y + currentIncrement;
         }
         //Down
         if (Input.GetKeyDown("f")){
-            currentIncrement = 0.2f;
             //if(Input.GetKey("f")){
             //increment += speed * Time.deltaTime;}
             desired.y = desired.y - currentIncrement;
         }
+        
         String quaternion = RetrieveAngles(desired); 
         
         String x_string = desired.x.ToString();
@@ -173,9 +171,9 @@ public class Client : MonoBehaviour
         //Debug.Log(desired.x);
         //Debug.Log(desired.y);
         //Debug.Log(desired.z);
-        //String quaternion = RetrieveAngles(desired); 
-        
+        //String quaternion = RetrieveAngles(desired);  
         return x_string + "#" + y_string + "#" + z_string + '#' + quaternion; 
+         
     }
     
    /*private void DisplayPosition(){

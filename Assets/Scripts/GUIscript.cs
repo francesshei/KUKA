@@ -9,11 +9,15 @@ public class GUIscript : MonoBehaviour
     public Camera cam; 
     public Camera cam2;
     public Vector3 des;
+    //from collision script
+    public bool touched; 
+    public string contact;
     //icons to be loaded in the GUI
     public Texture2D keyicon; 
     public Texture2D spaceicon; 
     public Texture2D zoominicon;
     public Texture2D zoomouticon;
+    public Texture2D dangericon; 
     
     //desired pos to display in the dialog box
     string xdes;
@@ -23,6 +27,7 @@ public class GUIscript : MonoBehaviour
     //paint styles
     public GUIStyle boxStyle; 
     public GUIStyle labelStyle; 
+    public GUIStyle labelWhiteStyle; 
     
     //layout quantities 
     public float leftMargin = 35f;
@@ -41,6 +46,8 @@ public class GUIscript : MonoBehaviour
     { 
         cam = GameObject.Find("CameraMovement").GetComponent<CameraMovement>().cam1; 
         cam2 = GameObject.Find("CameraMovement").GetComponent<CameraMovement>().cam2; 
+        touched = GameObject.Find("Tool").GetComponent<KUKA_Collision>().touched; 
+        contact = GameObject.Find("Tool").GetComponent<KUKA_Collision>().contact; 
         des = GameObject.Find("Client").GetComponent<Client>().desired; 
         xdes = des.x.ToString();
         ydes = des.y.ToString();
@@ -54,7 +61,14 @@ public class GUIscript : MonoBehaviour
         //Track end-effector position
         if(cam2.enabled){
         Vector3 eePos = cam.WorldToScreenPoint(ee.transform.position);
-        GUI.Box(new Rect(eePos.x + 20f ,Screen.height - eePos.y + 20f, 120,90),"x:" + xdes + '\n' + "y:" + ydes + '\n' + "z:" + zdes, boxStyle);}
+        GUI.Box(new Rect(eePos.x + 20f ,Screen.height - eePos.y + 20f, 3*size , 2*size),"x:" + xdes + '\n' + "y:" + ydes + '\n' + "z:" + zdes, boxStyle);}
+        //Warning message once the KUKA touches dangerous parts
+        if(touched == true){
+        GUI.Label(new Rect(width, height - 3*keyMargin,7.5f*size,5*size),"WARNING:\n", boxStyle);
+        GUI.DrawTexture(new Rect(width + 2*size + leftMargin ,height +  keyMargin,2*size,2*size),dangericon);
+        GUI.Label(new Rect(width + leftMargin + 10f, height + 2*size + keyMargin,5*size,size), contact + " has been touched", labelWhiteStyle);
+        }
+        
     }
     
     void DrawGUI(){

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class KUKA_Collision : MonoBehaviour
 {
-
+    public bool touched = false;
+    public string contact; 
     void Update(){}
         
     void OnCollisionEnter(Collision collision){
@@ -18,6 +19,13 @@ public class KUKA_Collision : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider){
         Debug.Log("Whoops");
-        Debug.Log(collider.gameObject.name);
+        touched = true; 
+        contact = collider.gameObject.name;
+        //Debug.Log(collider.gameObject.name);
+    }
+    private void OnTriggerExit(Collider collider){
+        //Debug.Log("Whoops");
+        touched=false; 
+        //Debug.Log(collider.gameObject.name);
     }
 }

@@ -56,8 +56,11 @@ public class GUIscript : MonoBehaviour
     
     // GUI 
     void OnGUI(){
-        //All the heavy hard-coding goes here
-        DrawGUI();
+        //All the heavy hard-coding goes here (only when requested by pressing 'H')
+        if(Input.GetKey("h")){
+        DrawGUI();}
+        GUI.Label(new Rect(width + size + keyMargin, 2*height - size - 2*keyMargin,4*size,size),"Press SPACE to change camera",labelStyle);
+        GUI.Label(new Rect(width + size + keyMargin, 2*height - size + keyMargin,4*size,size),"Press and hold H for help",labelStyle);
         //Track end-effector position
         if(cam2.enabled){
         Vector3 eePos = cam.WorldToScreenPoint(ee.transform.position);
@@ -110,8 +113,8 @@ public class GUIscript : MonoBehaviour
         
         
         //Space
-        GUI.Label(new Rect(width + size + keyMargin, 2*height - size,4*size,size),"Change camera:",labelStyle);
-        GUI.DrawTexture(new Rect(width + size + leftMargin , 2*height ,4*size,size),spaceicon);
+        //GUI.Label(new Rect(width + size + keyMargin, 2*height - size,4*size,size),"Change camera:",labelStyle);
+        //GUI.DrawTexture(new Rect(width + size + leftMargin , 2*height ,4*size,size),spaceicon);
         
         
         //Check if main moving camera is active
